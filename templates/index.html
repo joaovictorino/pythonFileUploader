@@ -1,0 +1,21 @@
+<html>
+<head>
+<script language="javascript">
+function submitForm() {
+    // get form and field elements    
+    theform = document.getElementById('singleuploadchunked')
+    if (document.getElementById('thefile').value=='') {
+      alert("Need to provide a file to upload first!")
+    }else {
+      theform.submit()
+    }
+}
+</script>
+</head>
+<body>
+<form id="singleuploadchunked" action="/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" id="thefile" name="file" />
+  <input type="button" value="submit single file chunked" onclick="submitForm()"/>
+</form>
+</body>
+</html>
